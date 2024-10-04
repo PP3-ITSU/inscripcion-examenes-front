@@ -61,7 +61,7 @@
           <aside class="main-sidebar sidebar-light-primary elevation-4">
             <!-- Brand Logo -->
             <div class="d-flex align-items-center">
-              <img src="../dist/img/logo.jpg" alt="LogoItsu" class="mr-3 ml-3 mt-2 img-fluid" style="height: 60px; width: 40px;">
+              <img src="../../adminlte/dist/img/logo.jpg" alt="LogoItsu" class="mr-3 ml-3 mt-2 img-fluid" style="height: 60px; width: 40px;">
               <p style="color: #951F32; margin: 0; font-size: 24px; font-weight: semi-bold;" class="mt-2 ml-3">Secretaria
                 Académica</p>
             </div>
@@ -144,14 +144,34 @@
             <h2 class="text-center my-4 "style="text-decoration: underline;">Solicitudes</h2>
                 <!-- Selector de Año -->
                 <div class="mb-3">
-                    <label for="selectAnio" class="form-label" style="font-size: 24px;">Selecciona la carrera:</label>
-                    <select class="form-select" id="selectAnio" style="max-width: 250px">
+                    <label for="selectCarrera" class="form-label" style="font-size: 24px;">Selecciona la carrera:</label>
+                    <select class="form-select" id="selectCarrera" style="max-width: 250px">
                         <option value="" disabled selected>--Carreras--</option>
                         <option value="1">Anáslisis y Desarrollo de Software</option>
                         <option value="2">Administración de Empresas</option>
                         <option value="3">Profesorado de Inglés</option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label for="selectAnio" class="form-label" style="font-size: 24px;">Selecciona el año:</label>
+                    <select class="form-select" id="selectAnio" style="max-width: 250px">
+                        <option value="" disabled selected>--Años--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="selectLlamado" class="form-label" style="font-size: 24px;">Selecciona el llamado:</label>
+                    <select class="form-select" id="selectLlamado" style="max-width: 250px">
+                        <option value="" disabled selected>--Llamado--</option>
+                        <option value="primer">Primer llamado</option>
+                        <option value="segundo">Segundo llamado</option>
+                        <option value="mesa especial">Mesa especial</option>
+                    </select>
+                </div>
+                
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
@@ -159,7 +179,6 @@
                                 <th >Nombre</th>
                                 <th>Apellido</th>
                                 <th>Materia</th>
-                                <th>Llamado</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -196,73 +215,64 @@
     
     <script>
     
-    const solicitudesporcarrera = {
-    		1: [{
+    /* const solicitudesporcarrera = { */
+    		/* 1: [{
     		nombre : 'Andrés',
             apellido: 'Korell',
-            materia: 'Programación',	
-            llamado: 'primer'
+            materia: 'Programación'
     		},
     		{
         		nombre : 'Nico',
                 apellido: 'Benneti',
-                materia: 'Programación',	
-                llamado: 'primer'
+                materia: 'Programación'
         		},
     		],
     		2: [{
         		nombre : 'Andrés',
                 apellido: 'Korell',
-                materia: 'Programación 2',	
-                llamado: 'primer'
+                materia: 'Programación 2'
         		},
         		{
             		nombre : 'Nico',
                     apellido: 'Benneti',
-                    materia: 'Programación 2',	
-                    llamado: 'primer'
+                    materia: 'Programación 2'
             		},
     		],
     		3: [{
         		nombre : 'Andrés',
                 apellido: 'Korell',
-                materia: 'Programación 3',	
-                llamado: 'primer'
+                materia: 'Programación 3'
         		},
         		{
             		nombre : 'Nico',
                     apellido: 'Benneti',
-                    materia: 'Programación 3',	
-                    llamado: 'primer'
+                    materia: 'Programación 3'
             		},
     		],
     		4: [{
         		nombre : 'Nico',
                 apellido: 'Benneti',
-                materia: 'Programación 4',	
-                llamado: 'primer'
+                materia: 'Programación 4'
         		},
         		{
             		nombre : 'Andrés',
                     apellido: 'Korell',
-                    materia: 'Programación 3',	
-                    llamado: 'primer'
+                    materia: 'Programación 3'
             		}
     		]    		
-    }
-    document.getElementById('selectAnio').addEventListener('change', function () {
-        const anioSeleccionado = this.value;
+    } */
+    /* document.getElementById('selectCarrera').addEventListener('change', function () {
+        const carreraSeleccionado = this.value;
         const solicitudesTable = document.getElementById('solicitudesTable');
         solicitudesTable.innerHTML = ''; // Limpiar la tabla anterior
     
-        if (solicitudesporcarrera[anioSeleccionado]) {
-        	solicitudesporcarrera[anioSeleccionado].forEach(solicitudes=> {
+        if (solicitudesporcarrera[carreraSeleccionado]) {
+        	solicitudesporcarrera[carreraSeleccionado].forEach(solicitudes=> {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td>${solicitudes.nombre}</td>
                     <td>${solicitudes.apellido}</td>
                     <td>${solicitudes.materia}</td>
-                    <td>${solicitudes.llamado}</td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-success mr-2 ">Aceptar</button>
@@ -274,7 +284,78 @@
                 });
         }
     });
-        
+ */
+    const solicitudesporAnio = {
+    		1: [{
+    		nombre : 'Andrés',
+            apellido: 'Korell',
+            materia: 'Programación',	
+    		},
+    		{
+        		nombre : 'Ramiro',
+                apellido: 'Odriozola',
+                materia: 'Programación'	
+        		},
+    		],
+    		2: [{
+        		nombre : 'Andrés',
+                apellido: 'Korell',
+                materia: 'BDD'
+        		},
+        		{
+            		nombre : 'Nico',
+                    apellido: 'Benneti',
+                    materia: 'BDD',	
+            		},
+    		],
+    		3: [{
+        		nombre : 'Andrés',
+                apellido: 'Korell',
+                materia: 'Auditoría'
+        		},
+        		{
+            		nombre : 'Nico',
+                    apellido: 'Benneti',
+                    materia: 'Auditoria'
+            		},
+    		],
+    		4: [{
+        		nombre : 'Nico',
+                apellido: 'Benneti',
+                materia: 'Programación 4'
+        		},
+        		{
+            		nombre : 'Andrés',
+                    apellido: 'Korell',
+                    materia: 'Programación 4'
+            		}
+    		]    		
+    }
+    document.getElementById('selectCarrera').addEventListener('change', function () {
+        const carreraSeleccionado = this.value;
+        const solicitudesTable = document.getElementById('solicitudesTable');
+        solicitudesTable.innerHTML = ''; // Limpiar la tabla anterior
+    
+        if (solicitudesporcarrera[carreraSeleccionado]) {
+        	solicitudesporcarrera[carreraSeleccionado].forEach(solicitudes=> {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${solicitudes.nombre}</td>
+                    <td>${solicitudes.apellido}</td>
+                    <td>${solicitudes.materia}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-success mr-2 ">Aceptar</button>
+                            <button class="btn btn-danger">Denegar</button>
+                        </div>
+                    </td>
+                `;
+                    solicitudesTable.appendChild(tr);
+                });
+        }
+    });
+
+    
     </script>
     
     <!-- ./wrapper -->
