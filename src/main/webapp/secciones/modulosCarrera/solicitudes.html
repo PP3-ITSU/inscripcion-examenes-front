@@ -141,221 +141,141 @@
 
             
             <section class="content">
-            <h2 class="text-center my-4 "style="text-decoration: underline;">Solicitudes</h2>
-                <!-- Selector de Año -->
+                <h2 class="text-center my-2 "style="text-decoration: underline;">Solicitudes</h2>
+                
                 <div class="mb-3">
-                    <label for="selectCarrera" class="form-label" style="font-size: 24px;">Selecciona la carrera:</label>
-                    <select class="form-select" id="selectCarrera" style="max-width: 250px">
-                        <option value="" disabled selected>--Carreras--</option>
-                        <option value="1">Anáslisis y Desarrollo de Software</option>
-                        <option value="2">Administración de Empresas</option>
-                        <option value="3">Profesorado de Inglés</option>
-                    </select>
+
+                    <div>
+                        <!-- Selector de Carrera -->
+                        <label for="selectCarrera" class="form-label m-2" style="font-size: 20px;">Selecciona la carrera:</label>
+                        <select class="form-select" id="selectCarrera" style="max-width: 250px">
+                            <option value="" disabled selected>--Carreras--</option>
+                            <option value="1">Análisis y Desarrollo de Software</option>
+                            <option value="2">Administración de Empresas</option>
+                            <option value="3">Profesorado de Inglés</option>
+                        </select>
+                    </div>
+                    <div>
+                    <!-- Selector de Año -->
+                        <label for="selectAnio" class="form-label mx-2 mt-2" style="font-size: 20px;">Selecciona el año:</label>
+                        <select class="form-select" id="selectAnio" style="max-width: 250px">
+                            <option value="" disabled selected>--Años--</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <!-- Selector de Llamado -->
+                        <label for="selectLlamado" class="form-label mx-2 mt-2" style="font-size: 20px;">Selecciona el llamado:</label>
+                        <select class="form-select" id="selectLlamado" style="max-width: 250px">
+                            <option value="" disabled selected>--Llamado--</option>
+                            <option value="primer">Primer llamado</option>
+                            <option value="segundo">Segundo llamado</option>
+                            <option value="mesa especial">Mesa especial</option>
+                        </select>
+                    </div>
                 </div>
+                <!-- 
                 <div class="mb-3">
-                    <label for="selectAnio" class="form-label" style="font-size: 24px;">Selecciona el año:</label>
-                    <select class="form-select" id="selectAnio" style="max-width: 250px">
-                        <option value="" disabled selected>--Años--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="selectLlamado" class="form-label" style="font-size: 24px;">Selecciona el llamado:</label>
-                    <select class="form-select" id="selectLlamado" style="max-width: 250px">
-                        <option value="" disabled selected>--Llamado--</option>
-                        <option value="primer">Primer llamado</option>
-                        <option value="segundo">Segundo llamado</option>
-                        <option value="mesa especial">Mesa especial</option>
-                    </select>
                 </div>
                 
+                <div class="mb-3">
+                </div> -->
+                
+                <!-- Tabla de Solicitudes -->
                 <div class="table-responsive">
                     <table class="table table-bordered table-hover table-striped">
                         <thead>
                             <tr>
-                                <th >Nombre</th>
+                                <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Materia</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody id="solicitudesTable">
-                        <!-- Acá se mostraran las materias -->
+                            <!-- Acá se mostraran las solicitudes -->
                         </tbody>
                     </table>
                 </div>
             </section>
-            <!-- /.content -->
         </div>
-
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
-
-        <!-- Main Footer -->
-        <footer class="main-footer py-1">
-      <div class="float-right">
-        <a href="https://isfdyturdinarrain-ers.infd.edu.ar/sitio/" target="_blank" title="Página web del ITSU">
-          <i class="fa-solid fa-globe fa-2x mr-2" style="color: black;"></i>
-        </a>
-        <a href="">
-          <i class="fa-brands fa-square-facebook mr-2 fa-2x" style="color: black;" title="Facebook del ITSU"></i>
-        </a>
-        <a href="">
-          <i class="fa-brands fa-instagram fa-2x" style="color: black;" title="Instagram del ITSU"></i>
-        </a>
-      </div>
-    </footer>
     </div>
-    
-    <script>
-    
-    /* const solicitudesporcarrera = { */
-    		/* 1: [{
-    		nombre : 'Andrés',
-            apellido: 'Korell',
-            materia: 'Programación'
-    		},
-    		{
-        		nombre : 'Nico',
-                apellido: 'Benneti',
-                materia: 'Programación'
-        		},
-    		],
-    		2: [{
-        		nombre : 'Andrés',
-                apellido: 'Korell',
-                materia: 'Programación 2'
-        		},
-        		{
-            		nombre : 'Nico',
-                    apellido: 'Benneti',
-                    materia: 'Programación 2'
-            		},
-    		],
-    		3: [{
-        		nombre : 'Andrés',
-                apellido: 'Korell',
-                materia: 'Programación 3'
-        		},
-        		{
-            		nombre : 'Nico',
-                    apellido: 'Benneti',
-                    materia: 'Programación 3'
-            		},
-    		],
-    		4: [{
-        		nombre : 'Nico',
-                apellido: 'Benneti',
-                materia: 'Programación 4'
-        		},
-        		{
-            		nombre : 'Andrés',
-                    apellido: 'Korell',
-                    materia: 'Programación 3'
-            		}
-    		]    		
-    } */
-    /* document.getElementById('selectCarrera').addEventListener('change', function () {
-        const carreraSeleccionado = this.value;
-        const solicitudesTable = document.getElementById('solicitudesTable');
-        solicitudesTable.innerHTML = ''; // Limpiar la tabla anterior
-    
-        if (solicitudesporcarrera[carreraSeleccionado]) {
-        	solicitudesporcarrera[carreraSeleccionado].forEach(solicitudes=> {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${solicitudes.nombre}</td>
-                    <td>${solicitudes.apellido}</td>
-                    <td>${solicitudes.materia}</td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-success mr-2 ">Aceptar</button>
-                            <button class="btn btn-danger">Denegar</button>
-                        </div>
-                    </td>
-                `;
-                    solicitudesTable.appendChild(tr);
-                });
-        }
-    });
- */
-    const solicitudesporAnio = {
-    		1: [{
-    		nombre : 'Andrés',
-            apellido: 'Korell',
-            materia: 'Programación',	
-    		},
-    		{
-        		nombre : 'Ramiro',
-                apellido: 'Odriozola',
-                materia: 'Programación'	
-        		},
-    		],
-    		2: [{
-        		nombre : 'Andrés',
-                apellido: 'Korell',
-                materia: 'BDD'
-        		},
-        		{
-            		nombre : 'Nico',
-                    apellido: 'Benneti',
-                    materia: 'BDD',	
-            		},
-    		],
-    		3: [{
-        		nombre : 'Andrés',
-                apellido: 'Korell',
-                materia: 'Auditoría'
-        		},
-        		{
-            		nombre : 'Nico',
-                    apellido: 'Benneti',
-                    materia: 'Auditoria'
-            		},
-    		],
-    		4: [{
-        		nombre : 'Nico',
-                apellido: 'Benneti',
-                materia: 'Programación 4'
-        		},
-        		{
-            		nombre : 'Andrés',
-                    apellido: 'Korell',
-                    materia: 'Programación 4'
-            		}
-    		]    		
-    }
-    document.getElementById('selectCarrera').addEventListener('change', function () {
-        const carreraSeleccionado = this.value;
-        const solicitudesTable = document.getElementById('solicitudesTable');
-        solicitudesTable.innerHTML = ''; // Limpiar la tabla anterior
-    
-        if (solicitudesporcarrera[carreraSeleccionado]) {
-        	solicitudesporcarrera[carreraSeleccionado].forEach(solicitudes=> {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${solicitudes.nombre}</td>
-                    <td>${solicitudes.apellido}</td>
-                    <td>${solicitudes.materia}</td>
-                    <td>
-                        <div class="btn-group">
-                            <button class="btn btn-success mr-2 ">Aceptar</button>
-                            <button class="btn btn-danger">Denegar</button>
-                        </div>
-                    </td>
-                `;
-                    solicitudesTable.appendChild(tr);
-                });
-        }
-    });
 
-    
+    <script>
+        // Simulación de datos de solicitudes según carrera, año y llamado
+        const solicitudesData = {
+            '1': {
+                '1': {
+                    'primer': [
+                        { nombre: 'Andrés', apellido: 'Korell', materia: 'Programación 1' },
+                        { nombre: 'Lucía', apellido: 'Pérez', materia: 'Matemáticas' }
+                    ],
+                    'segundo': [
+                        { nombre: 'Juan', apellido: 'García', materia: 'Lógica' }
+                    ]
+                },
+                '2': {
+                    'primer': [
+                        { nombre: 'Ana', apellido: 'Gómez', materia: 'Programación 2' }
+                    ]
+                }
+            },
+            '2': {
+                '1': {
+                    'primer': [
+                        { nombre: 'Carlos', apellido: 'López', materia: 'Contabilidad' }
+                    ]
+                },
+                '2': {
+                    'segundo': [
+                        { nombre: 'Marta', apellido: 'Fernández', materia: 'Economía' }
+                    ]
+                }
+            }
+        };
+
+        // Escucha el cambio en los tres selectores
+        document.querySelectorAll('#selectCarrera, #selectAnio, #selectLlamado').forEach(select => {
+            select.addEventListener('change', actualizarTabla);
+        });
+
+        function actualizarTabla() {
+            const carreraSeleccionada = document.getElementById('selectCarrera').value;
+            const anioSeleccionado = document.getElementById('selectAnio').value;
+            const llamadoSeleccionado = document.getElementById('selectLlamado').value;
+
+            const solicitudesTable = document.getElementById('solicitudesTable');
+            solicitudesTable.innerHTML = ''; // Limpiar la tabla anterior
+
+            // Validar si todos los selectores tienen un valor
+            if (carreraSeleccionada && anioSeleccionado && llamadoSeleccionado) {
+                const solicitudes = solicitudesData[carreraSeleccionada]?.[anioSeleccionado]?.[llamadoSeleccionado];
+
+                // Si existen solicitudes para la combinación seleccionada
+                if (solicitudes) {
+                    solicitudes.forEach(solicitud => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${solicitud.nombre}</td>
+                            <td>${solicitud.apellido}</td>
+                            <td>${solicitud.materia}</td>
+                            <td>
+                                <div class="btn-group">
+                                    <button class="btn btn-success mr-2">Aceptar</button>
+                                    <button class="btn btn-danger">Denegar</button>
+                                </div>
+                            </td>
+                        `;
+                        solicitudesTable.appendChild(tr);
+                    });
+                } else {
+                    solicitudesTable.innerHTML = '<tr><td colspan="4" class="text-center">No hay solicitudes para esta combinación.</td></tr>';
+                }
+            }
+        }
     </script>
     
     <!-- ./wrapper -->
