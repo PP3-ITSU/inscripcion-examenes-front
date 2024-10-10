@@ -159,22 +159,38 @@
                                             <label for="carrera">Carrera</label>
                                             <select id="carrera" class="form-control" name="carrera">
                                                 <!-- Opciones cargadas dinámicamente -->
-                                            </select>
+                                                <option value="" disabled selected></option>
+                                                <option value="op1">Análisis y Desarrollo de Software</option>
+                                                 <option value="op2">Administracion de Empresas</option>
+                                                 <option value="op1">Profesorado de Educación Primaria</option>
+                                                 <option value="op1">Profesorado de Lengua y Literatura</option>
+                                                 
+                                                </select>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="anio">Año</label>
-                                            <select id="anio" class="form-control" name="anio" disabled>
-                                                <!-- Opciones filtradas según la carrera -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="anio">Año</label>
+                                                <select id="anio" class="form-control" name="anio">
+                                                    <!-- Opciones filtradas según la carrera -->
+                                                 <option value="" disabled selected></option>
+                                                 <option value="op1">1</option>
+                                                 <option value="op1">2</option>
+                                                 <option value="op1">3</option>
+                                                 <option value="op1">4</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="materia">Materia</label>
-                                            <select id="materia" class="form-control" name="materia" disabled>
+                                            <select id="materia" class="form-control" name="materia">
                                                 <!-- Opciones filtradas según el año -->
+                                                <option value="" disabled selected></option>
+                                                <option value="op1">Matemática 1</option>
+                                                <option value="op1">Derechos humanos</option>
+                                                 <option value="op1">UDI</option>
+
                                             </select>
                                         </div>
                                     </div>
