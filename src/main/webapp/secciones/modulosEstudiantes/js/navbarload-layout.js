@@ -1,11 +1,7 @@
+import { loadNavbar } from './navbar.js';
+
 document.addEventListener('DOMContentLoaded', function () {
-  const navbarPath = '../../secciones/modulosEstudiantes/layout/navbar.html';
-  loadNavbar(navbarPath);
+  const navbarPath = './navbar.html'; // Ruta directa para los archivos dentro de layout
+  loadNavbar(navbarPath).catch(error => console.error('Error al cargar el navbar:', error));
 });
 
-function loadNavbar(navbarPath) {
-  // Llama a la función loadNavbar del archivo navbarload.js
-  import(navbarload).then(navbarload => {
-    navbarload.loadNavbar(navbarPath);
-  });
-}
