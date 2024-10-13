@@ -9,17 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   loadNavbar(navbarPath)
     .then(() => {
-      // Ajustar los enlaces después de cargar el navbar
+      // Ajustar los enlaces con la clase "dinamic-link" después de cargar el navbar
       const links = document.querySelectorAll('.dinamic-link');
 
       links.forEach(link => {
         let href = link.getAttribute('href');
 
         if (isIndexPage) {
+          //añade "layout/" a los enlaces para acceder si esta desde el index 
           link.setAttribute('href', `layout/${href}`);
         } else {
+          //si esta en index modifica la ruta para que recague la misma pagina
           if (href.includes('indexEstudiantes.html')) {
-            link.setAttribute('href', `../${href}`);
+            link.setAttribute('href', `../${href}`);            
           }
         }
       });
