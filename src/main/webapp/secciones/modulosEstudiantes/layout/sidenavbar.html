@@ -1,15 +1,24 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-primary elevation-4">
+<!-- El logo de la institución se cargara aqui  -->
+    <div class="d-flex align-items-center">
+        <img src="../../adminlte/dist/img/logo.jpg" alt="LogoItsu" class="mr-3 ml-3 mt-2 img-fluid dynamic-img" style="height: 60px; width: 40px;">
+        <p style="color: #951F32; margin: 0; font-size: 24px;" class="mt-2 ml-3">Area Estudiantes</p>
+    </div>
+    <hr style="border: 0; height: 0.5px; background-color: #0000004d; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);">
+  <!--Contiene link para volver al index de estudiantes-->
     <a href="../indexEstudiantes.html" class="brand-link dinamic-link">
-        <span class="brand-text font-weight-light">Mi Proyecto Web</span>
+        <span class="brand-text font-weight-light">Inicio-volver</span>
     </a>
+  <!--end-->
 
+  <!--contiene la barra de navegación lateral-->
     <div class="sidebar">
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+        <nav >
+            <ul class="nav nav-pills nav-sidebar flex-column custom-barra overflow-auto" data-widget="treeview" role="menu" data-accordion="false" style="max-height: 400px;">
                 <li class="nav-item">
                     <a href="alumnos.html" class="nav-link dinamic-link">
                         <i class="nav-icon fas fa-users"></i>
-                        <p>Alumnos</p>
+                        <p style="color: #951F32">Alumnos</p>
                     </a>
                 </li>
                 <li class="nav-item">
